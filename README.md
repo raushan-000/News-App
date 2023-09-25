@@ -26,7 +26,7 @@ The provided HTML code represents the structure of a web page for a news applica
 
 Overall, this HTML code provides the basic structure for a news application's front-end. The JavaScript file (script.js) is expected to handle the dynamic functionality, such as fetching news data and updating the webpage with the retrieved articles. The CSS file (style.css) is responsible for styling the elements on the page, but the provided code does not include its content.
 
-`***************************************************************************************************************************************`
+`**********************************************************************************************************************`
 
 ## Javascript code explanation
 
