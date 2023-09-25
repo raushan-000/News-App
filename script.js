@@ -8,10 +8,22 @@ function reload() {
 }
 
 async function fetchNews(query) {
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
-    const data = await res.json();
-    bindData(data.articles);
+    try {
+        const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+        const data = await res.json();
+
+        if (data.articles && Array.isArray(data.articles)) {
+            bindData(data.articles);
+        } else {
+            // Handle the case where data.articles is not valid.
+            console.error("Invalid data format: data.articles is not an array.");
+        }
+    } catch (error) {
+        // Handle any fetch or JSON parsing errors here.
+        console.error("Error fetching or parsing data:", error);
+    }
 }
+
 
 function bindData(articles) {
     const cardsContainer = document.getElementById("cards-container");
