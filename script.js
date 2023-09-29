@@ -1,4 +1,4 @@
-const API_KEY = "yor api key hera";
+const API_KEY = "yor api key here";
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => fetchNews("India"));
